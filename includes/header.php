@@ -12,7 +12,7 @@ $session = new session;
         <img src="images/logo1.png" width="120" height="70">
     </div>
     <ul>
-        <li><a href="projekti.php">HOME</a></li>
+        <li><a href="index.php">HOME</a></li>
         <li><a href="aboutus.php">ABOUT US</a></li>
         <li><a href="security_info.php">INFORMATION SECURITY</a></li>
         <li><a href="programs.php">PROGRAMS</a></li>
