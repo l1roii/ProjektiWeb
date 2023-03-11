@@ -1,3 +1,12 @@
+<?php
+require('autoloader.php');
+
+use App\Lib\Contact;
+
+$contact = new Contact;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,11 +19,11 @@
 
 <?php
 if (isset($_POST['add'])) {
-	$firstname = $_FILES['firstname'];
+	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$email = $_POST['email'];
     $idea = $_POST['idea'];
-	$contact->addPost($firstname, $lastname, $email,$idea);
+	$contact->addContact($firstname, $lastname, $email,$idea);
 }
 ?>
 
@@ -37,7 +46,7 @@ if (isset($_POST['add'])) {
                     <label for="subject">Idea</label>
                     <textarea id="subject" name="idea" placeholder="Write your idea.." style="height:200px"></textarea>
 
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="add" value="Submit">
                 </form>
             </div>
         </div>
