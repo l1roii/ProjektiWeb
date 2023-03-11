@@ -2,8 +2,10 @@
 require('Autoloader.php');
 
 use App\Lib\User;
+use App\Lib\Contact;
 
 $users = new User();
+$contacts = new Contact();
 
 ?>
 <!DOCTYPE html>
@@ -65,6 +67,14 @@ $users = new User();
                 </tbody>
             </table>
         </div>
+        <?php foreach ($contacts->getContact() as $contact) : ?>
+        <div class="card">
+            <h1><?php echo $contact['firstname']; ?> <?php echo $contact['lastname']; ?></h1>
+            <p class="price"><?php echo $contact['email']; ?></p>
+            <p><?php echo $contact['idea']; ?></p>
+            <p><button>Add to Cart</button></p>
+        </div>
+        <?php endforeach; ?>
         <script>
             function Alert() {
                 $alert = confirm("Are you sure you want to delete this?");

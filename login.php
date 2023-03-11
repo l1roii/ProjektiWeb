@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
     $user_found = $user->verify_user($user_email, $user_password);
     if ($user_found) {
         $session->login($user_found);
-        header("Location: projekti.php");
+        header("Location: index.php");
     } else {
         echo '<script>alert("Përdoruesi ose fjalëkalimi juaj nuk është i saktë!");</script>';
     }

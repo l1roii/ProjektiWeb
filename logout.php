@@ -3,5 +3,5 @@ require('autoloader.php');
 use App\Lib\Session;
 $session = new Session;
 $session->logout();
-header("Location: projekti.php");
+header("Location: index.php");
 ?>

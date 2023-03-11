@@ -4,7 +4,7 @@ namespace App\Lib;
 use App\Lib\Database;
 
 class Contact extends Database{
-        public function getPost(){
+        public function getContact(){
             $sql = "SELECT * FROM contact";
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute();
