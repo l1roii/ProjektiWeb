@@ -1,0 +1,182 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: grey;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 1px 2px 15px #000;
+    background-color: rgb(29, 26, 26);
+}
+.header{
+    width: 100%;
+    height: 70px;
+}
+.header .logo{
+    float: left;
+    width: 15%;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+.header ul{
+    float: left;
+    padding-top: 25px;
+}
+.header ul li{
+    display: inline;
+    padding: 10px;
+}
+.header ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.header ul li a:hover{
+    color:#38ACEC;
+}
+.login_register{
+    padding-left: 850px;
+}
+.header .login_register #login li{
+    padding: 3px;
+}
+.header .login_register #login a{
+    color: white;
+    border: 3px solid #ffc6855e;
+    background-color: #ffc68579;
+    padding: 7px;
+}
+.header .login_register #login a:hover{
+    color: rgba(255, 244, 145, 0.911);
+}
+.images{
+    width: 100%;
+    height: 500px;
+}
+.images .background_images{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/background.jpg);
+    background-size: 100%;
+    animation: slide 20s infinite;
+    text-align: center;
+}
+@keyframes slide{
+    0%{
+        background-image: url(../images/background.jpg);
+        background-size: 100%;
+    }
+    25%{
+        background-image: url(../images/background1.jpg);
+        background-size: 100%;
+    }
+    50%{
+        background-image: url(../images/background2.jpg);
+        background-size: 100%;
+    }
+    75%{
+        background-image: url(../images/background3.jpg);
+        background-size: 100%;
+    }
+}
+.background_images h1{
+    color: white;
+    padding-top: 200px;
+}
+/* .part2{
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../images/background5.jpg);
+    background-size: contain;
+    margin: 0px auto;
+    color: #fff;
+    padding-top: 50px;
+}
+.box{
+    padding-top: 10px;
+}
+.part2 .box{
+    float: left;
+    text-align: center;
+    width: 33.10%;
+    border: 1px solid #fff;
+    height: 300px;
+} */
+.part2 {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(../images/background5.jpg);
+    background-size: contain;
+    margin: 0px auto;
+    color: #fff;
+    padding-top: 50px;
+}
+  
+.box {
+width: 30%;
+height: 200px;
+margin-bottom: 20px;
+box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+.part2 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 80%;
+    margin-bottom: 40px;
+}
+  }
+.part3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(41, 39, 39);
+}
+.part3 .video{
+    color: #fff;
+}
+
+.part3 .chart h2{
+    color: white;
+}  
+  .boxone {
+    margin: 10px;
+    width: 48%;
+    height: 200px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .part3 {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .boxone {
+      width: 80%;
+      margin-bottom: 40px;
+    }
+  }
+.divider{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+.footer{
+    width: 100%;
+    height: 50px;
+    background-color: #001110;
+    color: #fff;
+    text-align: center;
+    padding-top: 1px;
+}
