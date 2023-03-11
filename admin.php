@@ -67,31 +67,34 @@ $contacts = new Contact();
                 </tbody>
             </table>
         </div>
-        <?php foreach ($contacts->getContact() as $contact) : ?>
-        <div class="card">
-            <h1><?php echo $contact['firstname']; ?> <?php echo $contact['lastname']; ?></h1>
-            <p class="price"><?php echo $contact['email']; ?></p>
-            <p><?php echo $contact['idea']; ?></p>
-            <p><button>Add to Cart</button></p>
+        <div class="contact">
+            <?php foreach ($contacts->getContact() as $contact) : ?>
+                <div class="card">
+                    <h1><?php echo $contact['firstname']; ?> <?php echo $contact['lastname']; ?></h1>
+                    <p class="price"><?php echo $contact['email']; ?></p>
+                    <p><?php echo $contact['idea']; ?></p>
+                    <p><button>Delete</button></p>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-        <script>
-            function Alert() {
-                $alert = confirm("Are you sure you want to delete this?");
-                if ($alert) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        </script>
-        <?php
-if (isset($_POST['delete'])) {
-    $users->deleteUser();
-    header("Location: cameras.php");
-}
-?>
         <?php include("includes/footer.php") ?>
+    </div>
+<script>
+    function Alert() {
+        $alert = confirm("Are you sure you want to delete this?");
+        if ($alert) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+<?php
+    if (isset($_POST['delete'])) {
+        $users->deleteUser();
+        header("Location: admin.php");
+    }
+?>
 </body>
 
 </html>
