@@ -8,6 +8,16 @@
     <title>Cyber Security | About us</title>
 </head>
 
+<?php
+if (isset($_POST['add'])) {
+	$firstname = $_FILES['firstname'];
+	$lastname = $_POST['lastname'];
+	$email = $_POST['email'];
+    $idea = $_POST['idea'];
+	$contact->addPost($firstname, $lastname, $email,$idea);
+}
+?>
+
 <body>
     <div class="container">
         <?php include("includes/header.php") ?>
@@ -21,15 +31,11 @@
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
+                    <label for="lname">Email</label>
+                    <input type="text" id="lname" name="email" placeholder="Your last name..">
 
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <label for="subject">Idea</label>
+                    <textarea id="subject" name="idea" placeholder="Write your idea.." style="height:200px"></textarea>
 
                     <input type="submit" value="Submit">
                 </form>
