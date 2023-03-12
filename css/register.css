@@ -2,10 +2,14 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: grey;
+    overflow:hidden;
 }
 .register{
-    width: 20%;
-    margin: 200px auto;
+    width:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-shadow: 1px 2px 15px #000;
     background-size: contain;
     text-align: center;
@@ -15,7 +19,27 @@ body{
     background-size: contain;
 }
 input[type="email"], input[type="password"],input[type = "text"]{
-    border-radius: 40px;
-    height: 25px;
-    outline: none;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
+
+#button {
+    background-color: #84a4e7; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #button:hover {
+    background-color: #3453db; 
+  }

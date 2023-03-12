@@ -15,6 +15,8 @@ $user = new User;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Cyber Security | Log in</title>
 </head>
 <?php
@@ -46,7 +48,7 @@ if (isset($_POST['login'])) {
             <label>Password:</label><br />
             <input type="password" name="user_password" id="password"><br />
             <br>
-            <input type="submit" value="Log in" name="login">
+            <input id="button" type="submit" value="Log in" name="login">
         </form>
     </div>
     <script>

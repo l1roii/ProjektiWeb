@@ -10,6 +10,8 @@ $user = new User;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>Cyber Security | Register</title>
 </head>
 <body>
@@ -35,7 +37,7 @@ $user = new User;
             <input type="email" name="user_email" id="email"><br />
             <label>Password:</label><br />
             <input type="password" name="user_password" id="password"><br />
-            <input type="submit" value="Register" name="Register">
+            <input id="button" type="submit" value="Register" name="Register">
         </form>
     </div>
     <script>

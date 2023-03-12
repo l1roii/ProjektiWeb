@@ -4,54 +4,15 @@ body{
     background-color: grey;
 }
 .container{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 1px 2px 15px #000;
     background-color: rgb(29, 26, 26);
 }
-.header{
-    width: 100%;
-    height: 90px;
-}
-.header .logo{
-    float: left;
-    width: 15%;
-    padding-left: 15px;
-    padding-top: 20px;
-}
-.header ul{
-    float: left;
-    padding-top: 25px;
-}
-.header ul li{
-    display: inline;
-    padding: 10px;
-}
-.header ul li a{
-    text-decoration: none;
-    color: #fff;
-}
-.header ul li a:hover{
-    color:#38ACEC;
-}
-.login_register{
-    padding-left: 850px;
-}
-.header .login_register #login li{
-    padding: 3px;
-}
-.header .login_register #login a{
-    color: white;
-    border: 3px solid #ffc6855e;
-    background-color: #ffc68579;
-    padding: 7px;
-}
-.header .login_register #login a:hover{
-    color: rgba(255, 244, 145, 0.911);
-}
+
 .security{
     width: 100%;
-    height:400px;
+    height: 400px;
     background-color: rgb(51, 51, 51);
 }
 .slide{
@@ -152,12 +113,4 @@ body{
     width: 100%;
     height: 2px;
     background-color: #fff;
-}
-.footer{
-    width: 100%;
-    height: 50px;
-    background-color: #001110;
-    color: #fff;
-    text-align: center;
-    padding-top: 1px;
 }
