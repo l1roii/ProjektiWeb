@@ -74,6 +74,7 @@ $contacts = new Contact();
                 </tbody>
             </table>
         </div>
+        <h1 style="justify-content:center; color: white;">Contact forms filled by users</h1>
         <div class="contact">
             <?php foreach ($contacts->getContact() as $contact) : ?>
                 <div class="card">
