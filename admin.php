@@ -60,7 +60,7 @@ $contacts = new Contact();
                         <td><?php echo $user['user_name']; ?></td>
                         <td><?php echo $user['user_lastname']; ?></td>
                         <td><?php echo $user['user_email']; ?></td>
-                        <td> <a href="modify_user.php">Modify</a> </td>
+                        <td> <a href="modify_user.php?user_id=<?php echo $user['user_id']; ?> ">Modify</a> </td>
                         <td> <a name="delete" type="submit" onclick="return Alert()" href="">Delete</a> </td>
                         </tr>
                     <?php endforeach; ?>
@@ -79,22 +79,22 @@ $contacts = new Contact();
         </div>
         <?php include("includes/footer.php") ?>
     </div>
-<script>
-    function Alert() {
-        $alert = confirm("Are you sure you want to delete this?");
-        if ($alert) {
-            return true;
-        } else {
-            return false;
+    <script>
+        function Alert() {
+            $alert = confirm("Are you sure you want to delete this?");
+            if ($alert) {
+                return true;
+            } else {
+                return false;
+            }
         }
-    }
-</script>
-<?php
+    </script>
+    <?php
     if (isset($_POST['delete'])) {
         $users->deleteUser();
         header("Location: admin.php");
     }
-?>
+    ?>
 </body>
 
 </html>

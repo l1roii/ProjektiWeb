@@ -13,8 +13,12 @@ $info = new Info();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/2112736a95.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <title>Cyber Security</title>
 </head>
+
+
 
 <body>
     <div class="container">
@@ -28,7 +32,6 @@ $info = new Info();
             <div class="box">
                 <img src="images/phone.png" width="50px" height="50px">
                 <h3>Telephones</h3>
-                <h4></h4>
                 <h4>So, it is the responsibility of security professionals or security analysts
                     to guide employees and individuals of
                     an organization to preserve their digital assets and privacy on their smartphones.</h4>
@@ -63,6 +66,25 @@ $info = new Info();
         <?php include("includes/footer.php") ?>
     </div>
 
+
+    <script>
+        $(function () {
+            $("#slider4").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+</script>
 </body>
 
 </html>

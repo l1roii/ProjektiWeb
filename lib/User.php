@@ -14,7 +14,7 @@ class User extends Database{
     }
 
     public function getUser(){
-        $sql = "SELECT user_name, user_lastname, user_email FROM users";
+        $sql = "SELECT user_id ,user_name, user_lastname, user_email FROM users";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
         while($result = $stmt->fetchAll()){
@@ -60,7 +60,7 @@ class User extends Database{
     }
     public function deleteUser(){
         $user_id = $_POST['user_id'];
-        $sql = "DELETE FROM useres WHERE user_id = $user_id";
+        $sql = "DELETE FROM users WHERE user_id = $user_id";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
     }

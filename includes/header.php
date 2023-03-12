@@ -7,6 +7,18 @@ use App\lib\session;
 $session = new session;
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/2112736a95.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <title>Cyber Security</title>
+</head>
+     <body>
+  
 <div class="header">
     <div class="logo">
         <img src="images/logo1.png" width="120" height="70">
