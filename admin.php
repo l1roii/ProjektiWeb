@@ -61,7 +61,12 @@ $contacts = new Contact();
                         <td><?php echo $user['user_lastname']; ?></td>
                         <td><?php echo $user['user_email']; ?></td>
                         <td> <a href="modify_user.php?user_id=<?php echo $user['user_id']; ?> ">Modify</a> </td>
-                        <td> <a name="delete" type="submit" onclick="return Alert()" href="">Delete</a> </td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="user_id" value="<?php echo $user['user_id']; ?>">
+                                <a name="delete"type="submit" onclick="return Alert()">Delete</a>
+                            </form>
+                        </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

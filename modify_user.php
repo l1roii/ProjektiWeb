@@ -15,17 +15,19 @@ $user = new User;
 <body>
 <?php
     if(isset($_POST['Modify'])){
+        $user_id = $_POST['user_id'];
         $user_name = $_POST['user_name'];
         $user_lastname = $_POST['user_lastname'];
         $user_email = $_POST['user_email'];
         $user_password = $_POST['user_password'];
         $user_role = 0;
-        $user->modifyUser($user_id,$user_name,$user_lastname,$user_email,$user_password);
+        $user->modifyUser($user_id,$user_name,$user_lastname,$user_email,$user_password,$user_role);
     }
     ?>
     <div class="Register">
         <h1>Modify</h1>
         <form  method="post">
+            <input type="hidden" name="user_id" id="user_id" >
             <label>Emri:</label><br />
             <input type="text" name="user_name" id="emri"><br />
             <label>Mbiemri: </label><br />

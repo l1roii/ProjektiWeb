@@ -21,6 +21,7 @@ $user = new User;
         $user_password = $_POST['user_password'];
         $user_role = 0;
         $user->addUser($user_name,$user_lastname,$user_email,$user_password,$user_role);
+        
     }
     ?>
     <div class="register">

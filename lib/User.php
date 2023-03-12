@@ -4,15 +4,6 @@ use PDO;
 
 class User extends Database{
 
-    public function getID($user_id){
-        $sql = "SELECT * FROM users WHERE user_id = $user_id";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->execute(["$user_id"]);
-
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result;
-    }
-
     public function getUser(){
         $sql = "SELECT user_id ,user_name, user_lastname, user_email FROM users";
         $stmt = $this->connect()->prepare($sql);
@@ -30,10 +21,10 @@ class User extends Database{
         $stmt->execute(["$user_name","$user_lastname","$user_email","$hash","$user_role"]);
     }
 
-    public function modifyUser($user_id,$user_name,$user_lastname,$user_email,$user_password){
-        $sql = "UPDATE users SET user_name=?, user_lastname=?, user_password=?, WHERE user_id=?";
+    public function modifyUser($user_id,$user_name,$user_lastname,$user_email,$user_password,$user_role){
+        $sql = "UPDATE users SET user_name=?, user_lastname=?, user_password=? user_role=0, WHERE user_id=?";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$user_name,$user_lastname,$user_email,$user_password,]);
+        $stmt->execute([$user_name,$user_lastname,$user_email,$user_password,$user_role,$user_id]);
     }
 
     public function verify_user($user_email, $user_password){
